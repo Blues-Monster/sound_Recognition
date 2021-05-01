@@ -139,7 +139,7 @@ def get_data(y,sr,name):
 for root, dirs, files in os.walk(audio_path):                       #读取音频文件并提取、保存其中信息
     for name in files:                                              #遍历文件
         end = name.split('.')
-        if end[-1] == 'wav':                                        #判断是否为wav音频文件
+        if end[-2] != '00054':                                        #判断是否为wav音频文件
             y,sr = librosa.load(root+'/'+name)   #输出为采样率为22050的单声道从0.0秒开始
             with open('../working/music.csv','a') as t:                #numline是来控制空的行数的
                 writer=csv.writer(t)                                #这一步是创建一个csv的写入器
