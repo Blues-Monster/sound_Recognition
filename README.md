@@ -1,3 +1,5 @@
+音乐是我们生活中不可缺少的一部分，不少人都用过网易云、QQ音乐类app，但随着近年版权意识的加强，网上各种音乐纷纷收费或下架，这对于一些用户来说体验并不好，以我个人为例，本人已开始从网上地毯式地下载音乐，并转为同一格式，目前已下载约4800首音乐，但问题也随之而来。本地音乐不能像网上那样模糊搜索，而且音乐流派混乱，对于听歌来说并不方便，故决定开发此项目。
+
 这个项目是为了对音乐流派(包括blues、classical、country、disco、hiphop、jazz、metal、pop、reggae、rock)进行分类而创建，基于python开发。从每个音频中提取出78个特征值，其中：
 
  - data[i,0] = 过零率(Zero Crossing Rate)
@@ -26,4 +28,4 @@ translate为转换文件，将各类型的音频文件转化为librosa库可识�
 
 test内为测试文件
 
-kaggle内为特征提取及模型计算文件
+kaggle内为特征提取及模型计算文件，地址：<a href="https://www.kaggle.com/bluesmonster/sound-recognition">https://www.kaggle.com/bluesmonster/sound-recognition</a>
