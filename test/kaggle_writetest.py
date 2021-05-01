@@ -17,7 +17,6 @@ def get_d(filepath,savepath):                            #创建信息提取函�
         writer.writerow(k)                                  #写入样本数据
 
 
-
 for root, dirs, files in os.walk(audio_path):                       #读取音频文件并提取、保存其中信息
     for name in files:                                              #遍历文件
         end = name.split('.')
