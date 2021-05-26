@@ -1,3 +1,4 @@
+#读取wav音频文件，并提取音频信息后保存为csv文件
 import csv
 import numpy as np
 import librosa
@@ -9,6 +10,7 @@ import os
 #load music
 audio_path = '../input/gtzan-dataset-music-genre-classification/Data/genres_original'
 
+music_dict = {'blues':0,'classical':1,'country':2,'disco':3,'hiphop':4,'jazz':5,'metal':6,'pop':7,'reggae':8,'rock':9}
 
 def get_data(y,sr,name):
     audio_file, _ = librosa.effects.trim(y)
@@ -131,8 +133,7 @@ def get_data(y,sr,name):
     data[i,75] = chroma_stft_var
     data[i,77] = name.split('.')[-2]
     data = data.tolist()
-    data[i][76] = name.split('.')[0]
-    print(name)
+    data[i][76] = music_dict[name.split('.')[0]]
     return data
 
 
