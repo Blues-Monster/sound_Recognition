@@ -1,3 +1,4 @@
+#音频流派分类文件
 import csv
 import numpy as np
 import librosa
@@ -29,8 +30,8 @@ data[i,75] = chroma_stft_var频率方差
 
 #判别程序
 
-audio_path = ''                   #音频地址
-y,sr = librosa.load(audio_path)   #输出为采样率为22050的单声道从0.0秒开始
+#audio_path = ''                   #音频地址
+#y,sr = librosa.load(audio_path)   #输出为采样率为22050的单声道从0.0秒开始
 
 def get_data(y,sr):
     audio_file, _ = librosa.effects.trim(y)
@@ -196,4 +197,6 @@ def get_data(y,sr):
 
     return data
 
-
+def sigmoid(x):
+    return 1/(1+np.exp(-x))
+print(sigmoid(1000))
