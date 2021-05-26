@@ -1,3 +1,4 @@
+#读取wav音频文件并提取信息保存为csv文件
 import librosa
 import os
 import csv
