@@ -2,7 +2,7 @@
 
 这个项目是为了对音乐流派(包括blues、classical、country、disco、hiphop、jazz、metal、pop、reggae、rock)进行分类而创建，基于python开发。从每个音频中提取出78个特征值，其中：
 
- - data[i,0] = 过零率(Zero Crossing Rate)
+ - data[i,0] = Zero Crossing Rate过零率
  - data[i,1] = y_harm_mean谐波均值
  - data[i,2] = y_harm_var谐波方差
  - data[i,3] = y_perc_mean感知激波均值
@@ -29,3 +29,7 @@ translate为转换文件，将各类型的音频文件转化为librosa库可识�
 test内为测试文件
 
 kaggle内为特征提取及模型计算文件，地址：<a href="https://www.kaggle.com/bluesmonster/sound-recognition">https://www.kaggle.com/bluesmonster/sound-recognition</a>
+
+bin内包含最终分类文件（尚未完成！！！）
+
+目前算法还存在致命错误导致模型无法使用，还在改进中。
